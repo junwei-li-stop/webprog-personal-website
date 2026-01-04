@@ -1,1 +1,169 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Personal Profile Website</title>
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --text: #212529;
+      --link: #0d6efd;
+      --link-active: #0a58ca;
+      --border: #dee2e6;
+      --card-bg: #fff;
+      --hover-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    nav {
+      margin: 1rem 0;
+    }
+    nav a {
+      color: var(--link);
+      text-decoration: none;
+      margin-right: 1.5rem;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      color: var(--link-active);
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem 0;
+    }
+    .portfolio-title {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--link);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    /* Responsive portfolio grid */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    /* Portfolio cards with interactive effects */
+    .portfolio-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--hover-shadow);
+    }
+    .card-img {
+      width: 100%;
+      height: 200px;
+      background: #e9ecef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6c757d;
+      font-size: 1.2rem;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    .card-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .card-content p {
+      color: #6c757d;
+      margin-bottom: 1rem;
+    }
+    footer {
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-top: 3rem;
+    }
+    /* Mobile adaptation */
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 0.8rem 0;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Portfolio</h1>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="portfolio.html">My Portfolio</a>
+    </nav>
+    <main>
+      <section>
+        <center><h2 class="portfolio-title">Learning Project Showcase</h2></center>
+        <div class="portfolio-grid">
+          <!-- Project 1 -->
+          <div class="portfolio-card">
+            <div class="card-img">Responsive Personal Homepage</div>
+            <div class="card-content">
+              <h3>Customized Profile Website</h3>
+              <p>A responsive website built with HTML/CSS, adapted for mobile and desktop devices, including 3 core modules: Home, About Me, and Portfolio.</p>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="portfolio-card">
+            <div class="card-img">CSS Layout Practice</div>
+            <div class="card-content">
+              <h3>Grid/Flex Layout Demo</h3>
+              <p>A layout project practicing CSS Grid and Flexbox, achieving multi-column adaptive display and mastering the core logic of responsive layout.</p>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="portfolio-card">
+            <div class="card-img">Interactive Effect Demo</div>
+            <div class="card-content">
+              <h3>Card Hover Animation</h3>
+              <p>Self-researched CSS transition animation, realizing card hover lift and shadow deepening effects (untaught in class) to enhance page interactivity.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      © 2026 Junwei Li | WEBPROG Midterm Assignment
+    </footer>
+  </div>
+</body>
+</html>
